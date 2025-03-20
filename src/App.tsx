@@ -7,7 +7,7 @@ function App() {
   const skills = [
     { name: 'Python', icon: Code2, level: 90 },
     { name: 'SQL', icon: Database, level: 85 },
-    { name: 'Machine Learning', icon: Brain, level: 80 },
+    { name: 'Machine Learning', icon: Brain, level: 90 },
     { name: 'Power BI', icon: LineChart, level: 85 },
     { name: 'Java', icon: Code2, level: 75 },
     { name: 'Excel', icon: FileSpreadsheet, level: 90 },
@@ -18,18 +18,21 @@ function App() {
       title: 'Inventory Optimization',
       description: 'Developed a data-driven inventory management system using EDA, strategic analysis (ABC, HML), and ML models to predict stockouts. Implemented Linear Regression, Decision Tree, Random Forest, and XGBoost for forecasting. Used K-Means Clustering to group products and optimize stock levels. Provided insights for demand forecasting and procurement planning.',
       tech: ['Python', 'Machine Learning', 'Power BI', 'SQL'],
+      link: 'https://github.com/lukman-17/Inventory-Analysis'
     },
     {
       title: 'Next Word Predictor',
-      description: 'Natural Language Processing model using TensorFlow and PyTorch for intelligent next word prediction in text sequences.',
+      description: 'Next Word Predictor is an NLP model using TensorFlow, PyTorch, and GPT-2 for intelligent next-word prediction. A real-time Streamlit UI enables users to input text and receive accurate word suggestions, enhancing writing assistance, auto-completion, and language modeling applications efficiently.',
       tech: ['Python', 'TensorFlow', 'PyTorch', 'NLP','GPT-2'],
+      link: 'https://github.com/lukman-17/Inventory-Analysis'
     },
     {
       title: 'Stock Analysis & Prediction',
       description: 'Fetched stock data using yfinance and performed EDA to analyze price variations. Applied time series models like SARIMA and LSTM to predict future stock prices. Evaluated model performance using RMSE and R-squared values. Provided insights into stock trends to support better investment decisions.',
       tech: ['Python', 'LSTM', 'Deep Learning', 'Data Visualization'],
+      link: 'https://github.com/lukman-17/Inventory-Analysis'
     },
-  ];
+];
 
   return (
     <div className="min-h-screen bg-gray-900 text-gray-100">
@@ -56,9 +59,9 @@ function App() {
           <div className="container mx-auto px-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
               <div>
-                <h2 className="text-4xl md:text-5xl font-bold mb-6">Junior Data Analyst</h2>
+                <h2 className="text-4xl md:text-5xl font-bold mb-6">Data Analyst</h2>
                 <p className="text-xl text-gray-300 mb-8">
-                  Passionate about transforming data into actionable insights and building intelligent solutions.
+                A data-driven professional with expertise in SQL, Power BI, and Machine Learning, leveraging AI techniques to extract insights, build predictive models, and enhance business intelligence. Skilled in data visualization, statistical analysis, and machine learning algorithms to optimize decision-making and improve operational efficiency. Experienced in transforming raw data into meaningful insights and deploying ML models to enhance business analytics.
                 </p>
                 <div className="flex space-x-4 mb-8">
                   <a href="https://github.com/lukman-17" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-blue-400 transition">
@@ -71,9 +74,16 @@ function App() {
                     <Mail size={24} />
                   </a>
                 </div>
-                <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg flex items-center space-x-2 transition">
-                  <Download size={20} />
-                  <span>Download Resume</span>
+                <button>
+                    <a 
+                      href="/Lukman Resume.pdf" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg flex items-center space-x-2 transition"
+                    >
+                      <Download size={20} />
+                      <span>View Resume</span>
+                    </a>
                 </button>
               </div>
               <div className="relative">
@@ -93,8 +103,8 @@ function App() {
             <h2 className="text-3xl font-bold mb-12">Experience</h2>
             <div className="space-y-8">
               <div className="bg-gray-700 rounded-lg p-6">
-                <h3 className="text-xl font-bold mb-2">Junior Data Analyst</h3>
-                <p className="text-gray-300 mb-2">TopNotch Technology</p>
+                <h3 className="text-xl font-bold mb-2">Data Analyst</h3>
+                <p className="text-gray-300 mb-2">TopNotch Technology, &nbsp;&nbsp;&nbsp; July 2024 - Present</p>
                 <p className="text-gray-400">
     <ul>
         <li>Conducted data preparation, cleaning, and preprocessing for analytical projects.</li>
@@ -107,7 +117,7 @@ function App() {
               </div>
               <div className="bg-gray-700 rounded-lg p-6">
                 <h3 className="text-xl font-bold mb-2">Software Trainee</h3>
-                <p className="text-gray-300 mb-2">UpRevol Technologies</p>
+                <p className="text-gray-300 mb-2">UpRevol Technologies, &nbsp;&nbsp;&nbsp;Aug 2023 - Jan 2024</p>
                 <p className="text-gray-400">
     <ul>
         <li>Developed and optimized web applications, gaining hands-on experience in software development.</li>
@@ -132,13 +142,18 @@ function App() {
                 <div key={index} className="bg-gray-800 rounded-lg p-6 hover:transform hover:scale-105 transition duration-300">
                   <h3 className="text-xl font-bold mb-4">{project.title}</h3>
                   <p className="text-gray-300 mb-4">{project.description}</p>
-                  <div className="flex flex-wrap gap-2">
+                  <div className="flex flex-wrap gap-2 mb-4">
                     {project.tech.map((tech, techIndex) => (
                       <span key={techIndex} className="bg-blue-600 text-sm px-3 py-1 rounded-full">
                         {tech}
                       </span>
                     ))}
                   </div>
+                  {project.link && (
+                    <a href={project.link} target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">
+                      View Project
+                    </a>
+                  )}
                 </div>
               ))}
             </div>
