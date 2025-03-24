@@ -30,8 +30,29 @@ function App() {
       title: 'Stock Analysis & Prediction',
       description: 'Fetched stock data using yfinance and performed EDA to analyze price variations. Applied time series models like SARIMA and LSTM to predict future stock prices. Evaluated model performance using RMSE and R-squared values. Provided insights into stock trends to support better investment decisions.',
       tech: ['Python', 'LSTM', 'Deep Learning', 'Data Visualization'],
-      link: 'https://github.com/lukman-17/Inventory-Analysis'
+      link: 'https://github.com/lukman-17/Stock-Analysis-and-Prediction'
     },
+    {
+      title: 'Cyber Attack Prediction and Detection using ML',
+      description: 'This project leverages machine learning to predict cyber attacks using a Kaggle dataset. Models like Logistic Regression, Decision Tree, Random Forest, and CNN were implemented, with CNN achieving the best accuracy. Optimization techniques enhanced performance, enabling real-time cyber threat detection and mitigation.',
+      tech: ['Python', 'Machine Learning', 'Cyber Security','Streamlit'],
+      link: 'https://github.com/lukman-17/Cyber-Attack-Prediction-using-ML'
+    },
+    {
+      title: 'CLTV Prediction App',
+      description: 'This Streamlit-based CLTV Prediction App uses machine learning to predict Customer Lifetime Value. The dataset was preprocessed with StandardScaler and log transformation to improve accuracy. Random Forest outperformed other models, ensuring reliable predictions based on user inputs for demographics and policy details.',
+      tech: ['Python', 'Machine Learning', 'Data Analysis','Streamlit'],
+      link: 'https://github.com/lukman-17/CLTV-Prediction'
+    },
+
+    {
+      title: 'Object Detection in Driving Enviroment',
+      description: 'This project builds a YOLOm11 object detection UI using Streamlit in Google Colab. Users can upload images for detection, and the app overlays bounding boxes on detected objects. It features a custom background theme, runs YOLOv8 for inference, and is deployed using ngrok for online access.',
+      tech: ['Python', 'Computer Vision','YOLOv11' ,'Streamlit','PyNgrok'],
+      link: 'https://github.com/lukman-17/CLTV-Prediction'
+    },
+
+
 ];
 
   return (
@@ -55,7 +76,7 @@ function App() {
       {/* Main Content */}
       <main className="pt-20">
         {/* Hero Section */}
-        <section id="about" className="min-h-screen flex items-center bg-gradient-to-b from-gray-900 to-gray-800">
+        <section id="about" className="min-h-screen flex items-center bg-gradient-to-b from-gray-900 to-gray-800 pt-10 md:pt-20">
           <div className="container mx-auto px-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
               <div>
